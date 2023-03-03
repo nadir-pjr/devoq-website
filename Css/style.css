@@ -1,0 +1,701 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    transition: all .2s;
+    scroll-behavior: smooth;
+}
+
+/* color  */
+
+/* #EE1866
+#F7A538 */
+
+
+body {
+    animation: body 2s linear alternate;
+}
+
+@keyframes body {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/* navbar  */
+
+nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    /* background: #ddd; */
+    -webkit-box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.233); 
+box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.244);
+
+}
+
+nav .logo img {
+    width: 50px;
+    cursor: pointer;
+}
+
+nav .logo img:hover {
+    animation: rotate-scale-down-ver 1s linear 0s 1 normal none;
+}
+
+@keyframes rotate-scale-down-ver {
+			
+    0% {
+        transform:scale(1) rotateY(0);
+    }
+    50% {
+        transform:scale(.5) rotateY(180deg);
+    }
+    100% {
+        transform:scale(1) rotateY(360deg);
+    }
+}
+
+
+
+nav .nav-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-text li {
+    list-style: none;
+}
+
+nav .nav-text li a {
+    text-decoration: none;
+    margin: 1px 15px;
+    font-weight: 700;
+    color: #0e0e0e;
+}
+
+nav .nav-text li a:hover {
+    color: #EE1866;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown span {
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 8px 15px;
+    /* border-radius: 50px; */
+    min-width: 105px;
+    margin-top: 9px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+    border-radius: none;
+}
+
+
+@media(max-width: 480px) {
+
+    nav .logo img {
+        width: 40px;
+    }
+
+
+    nav .nav-text li a {
+        font-size: 14px;
+        margin: 1px 8px;
+    }
+
+    .dropdown {
+        display: none;
+    }
+}
+
+
+/* end of navbar  */
+
+
+
+/* container  */
+
+#container {
+    width: 100%;
+    height: auto;
+    background: url(../img/Layer64.png) center center/cover;
+    position: relative;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 40px;
+    padding: 20px;
+}
+
+.container-content .container-img img {
+    width: 400px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+
+.container-content .container-text {
+    width: 420px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.container-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.container-text h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.container-text p {
+    margin-bottom: 60px;
+}
+
+
+
+@media(max-width: 480px) {
+    .container-content .container-img img {
+        width: 300px;
+    }
+
+    .container-content .container-text {
+        width: 420px;
+        margin-left: 2px;
+        margin-top: 40px;
+    }
+
+    .container-text h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .container-text h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    
+    .container-text p {
+        margin-bottom: 50px;
+    }
+
+    .text-img {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .text-img img {
+        margin: 5px;
+        width: 130px;
+    }
+}
+
+
+
+/* assistant  */
+
+
+#assistant {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    background: url(../img/Layer55.png) center center/cover;
+    padding: 90px;
+    margin-top: 50px;
+    -webkit-box-shadow: 0px 0px 14px 4px #00000025; 
+    box-shadow: 0px 0px 14px 4px #00000025;
+}
+
+
+
+
+.assistant-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.assistant-content .assistant-content-img img {
+    width: 200px;
+    display: block;
+}
+
+.assistant-content .assistant-content-img img{
+    margin-right: 30px;
+}
+
+
+.second-img {
+    margin-left: 50px;
+}
+
+.assistant-content .assistant-content-text {
+    width: 440px;
+}
+
+
+
+.assistant-content-text {
+    width: 420px;
+}
+
+.assistant-content-text h1 {
+    margin-bottom: 50px;
+}
+
+@media(max-width: 480px) {
+    #assistant {
+        padding: 60px 30px;
+    }
+
+    .assistant-content-text h1 {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* finish assistant  */
+
+
+/* gallery  */
+
+
+#gallery {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: url(../img/Layer64.png) center center/cover;
+}
+
+.gallery-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.gallery-text {
+    margin-bottom: 50px;
+}
+
+.gallery-text p {
+    margin-top: 30px;
+}
+
+
+.gallery-img {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-img-1 img {
+    width: 280px;
+    margin: 20px;
+    cursor: pointer;
+
+}
+
+
+@media(max-width: 990px) {
+    .gallery-img-1 img {
+        width: 210px;
+    }
+}
+
+@media(max-width: 768px) {
+    .gallery-img {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery-text h1 {
+        font-size: 23px;
+    }
+
+    .gallery-img-1 img {
+        width: 210px;
+    }
+} 
+
+@media(max-width: 480px) {
+
+    .gallery-text {
+        width: 300px;
+    }
+
+    .gallery-img-1 img {
+        width: 270px;
+    }
+}
+
+
+/* finish gallery  */
+
+
+/* easy  */
+
+
+#easy {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: url(../img/form4pic.png) center center/cover;
+    -webkit-box-shadow: 0px 0px 14px 4px #00000025; 
+    box-shadow: 0px 0px 14px 4px #00000025;
+    padding: 100px;
+}
+
+.easy-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 600px;
+    padding: 100px;
+    /* transform: translateY(60px); */
+}
+
+.easy-text h1 {
+    margin-bottom: 20px;
+}
+
+
+@media(max-width: 990px) {
+    .easy-text {
+        transform: translateX(-130px);
+    }
+}
+
+
+@media(max-width: 768px) {
+    .easy-text {
+        width: 400px;
+        padding: 50px;
+        transform: translateX(-110px);
+    }
+
+    .easy-text h1 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .easy-text {
+        width: 300px;
+    }
+
+    .easy-text p {
+        font-size: 14px;
+    }
+}
+
+
+/* easy finish  */
+
+
+/* links  */
+
+
+#links {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #333;
+}
+
+.links-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.links-devoq-logo p {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.links-devoq-logo img {
+    animation: logo 2s infinite;
+}
+
+@keyframes logo {
+        0% {
+            transform:rotateX(360deg);
+            opacity:1;
+        }
+        100% {
+            transform:rotateX(0deg);
+            opacity:0;
+        }
+ }
+
+.links-company {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-company h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.links-company .legal {
+    margin-bottom: 78px;
+}
+
+.links-company li {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.links-company li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.links-company li a:hover {
+    color: tomato;
+}
+
+.li-2 {
+    transform: translateY(-29px);
+}
+
+
+
+.links-community h3 {
+    color: #fff;
+    margin-bottom: 53px;
+}
+
+.links-community-logo {
+    margin-bottom: 20px;
+    transform: translateY(-30px);
+}
+
+.links-community-logo i {
+    color: #fff;
+    font-size: 27px;
+    margin: 5px;
+}
+
+.links-community-logo i:hover {
+    color: tomato;
+}
+
+.links-company li a {
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.input-email {
+    display: flex;
+    position: relative;
+    width: 80px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translateY(-30px);
+}
+
+.input-email input {
+    position: relative;
+    border: none;
+    outline: none;
+    padding: .8rem 3rem;
+    border-radius: 5px;
+}
+
+.input-email input::placeholder {
+    transform: translateX(-40px);
+}
+
+.input-email button {
+    position: absolute;
+    width: 80px;
+    height: 42px;
+    background: linear-gradient(145deg,  #EE1866,  #F7A538);
+    border: none;
+    outline: none;
+    transform: translateX(164px);
+    border-radius: 5px;
+}
+
+.input-email button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+@media(max-width: 990px) {
+
+    .links-devoq-logo p {
+        font-size: 13px;
+        width: 170px;
+    }
+
+    .links-content {
+        padding: 30px;
+    }
+
+    .links-community h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .links-company li {
+        padding-top: 2px;
+    }
+
+    .links-company .legal {
+        margin-bottom: 64px;
+    }
+
+    .links-community-logo {
+        transform: translateY(-1px);
+    }
+
+    .links-community-logo i {
+        font-size: 18px;
+    }
+
+    .input-email {
+        width: 50px;
+        transform: translateY(-1px);
+        background: tomato;
+    }
+
+    .input-email input {
+        padding: .5rem 1rem;
+    }
+
+    .input-email input::placeholder {
+        transform: translateX(-10px);
+    }
+    
+
+    .input-email button {
+        width: 60px;
+        height: 32px;
+        transform: translateX(119px);
+        border-radius: 5px;
+    }
+}
+
+
+
+
+
+@media(max-width: 768px) {
+    .links-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+
+    .links-devoq-logo {
+        margin-bottom: 50px;
+    }
+
+    .links-company .legal {
+        margin-top: 30px;
+    }
+}
+
+
+
+footer {
+    position: relative;
+    background: #333;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #fff;
+}
+
+#made {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#made p {
+    color: #fff;
+}
+
+
+@media(max-width: 480px) {
+    #made {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+#made p {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 13px;
+}
+}
